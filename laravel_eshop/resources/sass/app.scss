@@ -1,0 +1,6 @@
+// ✅ All @use statements at the very top
+@use "variables" as *;
+@use "bootstrap/scss/bootstrap";
+
+// ✅ Then import external CSS like fonts
+@import url("https://fonts.bunny.net/css?family=Nunito");
