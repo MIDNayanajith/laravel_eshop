@@ -37,4 +37,10 @@ Route::middleware(['auth',AuthAdmin::class])->group(function(){
     Route::get('/admin/category/edit/{id}',[AdminController::class,'catergory_edit'])->name('admin.category.edit');
     Route::put('/admin/category/update',[AdminController::class,'category_update'])->name('admin.category.update');
     Route::delete('admin/category/{id}/delete',[AdminController::class,'category_delete'])->name('admin.category.delete');
+
+    // products routes
+
+    Route::get('/admin/products',[AdminController::class,'products'])->name('admin.products');
+    Route::get('/admin/products/add',[AdminController::class,'product_add'])->name('admin.product.add');
+    Route::post('admin/products/store',[AdminController::class,'product_store'])->name('admin.product.store');
 });
